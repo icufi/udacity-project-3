@@ -34,10 +34,11 @@ app.post('/weatherdata', saveWeather)
 
 function saveWeather(req, res) {
   let data = req.body;
+  // console.log(data)
   let newEntry = {
-    temperature: data.temp,
+    temperature: data.temperature,
     date: data.date,
-    'user response': data.userResponse
+    feeling: data.feeling
   };
   projectData.push(newEntry);
   console.log(projectData);
