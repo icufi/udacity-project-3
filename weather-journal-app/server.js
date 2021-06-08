@@ -25,11 +25,23 @@ app.use(cors());
 app.use(express.static("website"));
 
 // Setup Server
-const port = 3180;
+const port = 8000;
 
 const server = app.listen(port, () => console.log(`server is listening on port ${port}`));
 
+app.get('/projectdata', (req, res) => res.send(projectData));
+app.post('/weatherdata', saveWeather)
 
+function saveWeather(req, res) {
+  let data = req.body;
+  let newEntry = {
+    temperature: data.temp,
+    date: data.date,
+    'user response': data.userResponse
+  };
+  projectData.push(newEntry);
+  console.log(projectData);
+};
 
 
 
