@@ -1,111 +1,123 @@
-body{
-    background: #fffff8;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+body {
+  background-image: url(/images/maldives-3220702.jpg);
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
 }
 
-#app{
-    display: grid;
-    grid-auto-rows: minmax(150px, auto);
-    /* grid-template-columns:  */
-    height:100vh;
-    background: #f23557;
-    color: #f0d43a;
-    justify-content: center;
-    grid-gap: 1em;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
+#app {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  grid-gap: 1em;
+  font-size: 20px;
 }
 
-.holder{
-
+.holder.zip {
+  color: white;
+}
+#zip {
+  background-color: #f8f8ff6e;
+  border-radius: 6px;
+  height: 42px;
+  backdrop-filter: blur(10px);
+  padding: 0px 20px;
 }
 
-.entry{
-    background: rgba(59, 74, 107, .4);
+#zip:hover {
+  background-color: white;
 }
 
-#entryHolder{
-
+.holder.feel {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  grid-gap: 0.5em;
+  color: white;
 }
 
-#date{
-
-}
-
-#temp{
-
-}
-
-#content{
-
+.entry {
+  background: rgba(59, 74, 107, 0.4);
 }
 
 .headline {
-
-}
-.title{
-
+  font-size: 66px;
+  color: white;
 }
 
 /*  Basic Styling To Override Default For Basic HTML Elements */
-label{
-    display:block;
-    font-size: 27px;
+label {
+  display: block;
+  font-size: 27px;
 }
 
-input{
-    display:block;
-    height: 60px;
-    width: 320px;
-    background:#22b2da;
-    color: #f0d43a;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
-    border: none;
+input {
+  display: block;
+  height: 60px;
+  width: 320px;
+  font-size: 20px;
+  border: none;
 }
 
-button{
-    width: 400px;
-    height: 100px;
-    background: #3b4a6b;
-    color: #f0d43a;
-    font-size: 26px;
-    font-family: 'Oswald', sans-serif;
-    border: none;
-    box-shadow: 2px 4px 5px #444;
+button {
+  width: auto;
+  height: 100px;
+  background: #38c2c2;
+  color: white;
+  font-size: 26px;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 2px 4px 5px #444;
+  height: 38px;
 }
-h1{
-    font-size: 36px;
+h1 {
+  font-size: 36px;
 }
 
-textarea{
-    background:#22b2da;
-    color: #f0d43a;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
+textarea {
+  background: #f8f8ff6e;
+  font-size: 20px;
+  border-radius: 6px;
+  height: 60px;
+  backdrop-filter: blur(10px);
+}
+
+textarea:hover {
+  background-color: white;
 }
 /* Reset style for HTML element on active to have no border*/
 input:focus,
 select:focus,
 textarea:focus,
 button:focus {
-    outline: none;
+  outline: none;
 }
 /* Style for Placeholder Text*/
-::placeholder { /* Firefox, Chrome, Opera */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
+::placeholder {
+  /* Firefox, Chrome, Opera */
+  color: black;
+}
 
-} 
-  
-:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: black;
+}
 
-} 
-  
-::-ms-input-placeholder { /* Microsoft Edge */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: black;
+}
 
-} 
+.holderResponse {
+  background-color: transparent;
+  backdrop-filter: blur(4px);
+  border-radius: 20px;
+  padding: 10px 90px;
+  font-weight: 600;
+}
+
+.holder.entry {
+  display: none;
+}
