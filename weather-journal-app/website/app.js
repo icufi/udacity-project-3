@@ -1,5 +1,5 @@
 /* Global Variables */
-const apiKey = "&appid=0bee29c772704d38dee97aa6f80bcb11";
+const apiKey = "&appid=0bee29c772704d38dee97aa6f80bcb11&units=imperial";
 const baseURL = "http://api.openweathermap.org/data/2.5/weather?zip=";
 
 // event listener that initiates api call;
@@ -13,12 +13,9 @@ function performAction(e) {
 
   //api call chained with server.js call and UI update of data from api and user
   getWeather(baseURL, zipCode, apiKey).then(function (data) {
-    //convert kelvin to farenheit and round up number
-    const tempRound = `${
-      Math.round((((data.main.temp - 273.15) * 9) / 5 + 32) * 10) / 10
-    }°F`;
+   
     postData("/weatherdata", {
-      temperature: tempRound,
+      temperature: `${data.main.temp}°F`,
       date: newDate,
       feeling: userResponse,
     }).then(updateUI());
