@@ -13,7 +13,7 @@ function performAction(e) {
 
   //api call chained with server.js call and UI update of data from api and user
   getWeather(baseURL, zipCode, apiKey).then(function (data) {
-   
+
     postData("/weatherdata", {
       temperature: `${data.main.temp}°F`,
       date: newDate,
@@ -24,7 +24,7 @@ function performAction(e) {
 
 // Create a new date instance dynamically with JS
 let d = new Date();
-let newDate = d.getMonth() + "." + d.getDate() + "." + d.getFullYear();
+let newDate = d.getMonth() + 1 + "." + d.getDate() + "." + d.getFullYear();
 
 //api call function
 const getWeather = async (baseURL, zipCode, apiKey) => {
