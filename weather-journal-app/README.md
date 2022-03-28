@@ -1,4 +1,3 @@
-# Weather-Journal App Project
+# Overview Weather Journal app
 
-## Overview
-This is a weather journal app that makes calls to the openweathermap api and records user content.
+This is a weather journal app that makes calls to the openweathermap api, retrieves and displays weather conditions, and displays user text input.
